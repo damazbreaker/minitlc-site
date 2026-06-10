@@ -642,3 +642,45 @@ footer h3 {
     }
 
 }
+
+.contador {
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #002B7F,
+        #C1121F
+    );
+
+    color: white;
+}
+
+.contador h2{
+    color: white;
+}
+
+#contador {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.vagas-box {
+      text-align: center;
+    background: linear-gradient(
+        135deg,
+        #002B7F,
+        #C1121F
+    );
+
+    color: white;
+}
+
+.vagas-box h2{
+    color: white;
+}
+
+#vagas {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
