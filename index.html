@@ -1,245 +1,386 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Movimento católico de evangelização através da 
-    fé, oração, formação e esporte.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TLC - Atletas de Cristo | Fé, esporte e Evangelização</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <meta
+      name="description"
+      content="Movimento católico de evangelização através da fé, oração, formação e esporte."
+    />
+
+    <title>TLC - Atletas de Cristo | Fé, Esporte e Evangelização</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
+
+  <body>
+    <!-- LOADER -->
+
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+
+      <p>Carregando...</p>
+    </div>
+
+    <!-- BOTÃO WHATSAPP -->
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
+    <!-- CABEÇALHO -->
+
     <header>
-        <img src="img/logo.png" alt="Logo TLC" class="logo">
-        <h1>✝️ TLC - Atletas de Cristo</h1>
-        <p>Fé • Esporte • Comunhão • Evangelização</p>
+      <img src="img/logo.png" alt="Logo TLC" class="logo" />
+
+      <h1>✝️ TLC - Atletas de Cristo</h1>
+
+      <p>Fé • Esporte • Comunhão • Evangelização</p>
     </header>
 
+    <!-- MENU -->
+
     <nav>
+      <button class="menu-toggle">☰</button>
 
-        <button class="menu-toggle">☰</button>
+      <a href="index.html">Início</a>
+      <a href="atividades.html">Atividades</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+      <a href="faq.html">FAQ</a>
 
-        <a href="index.html">Início</a>
-
-        <a href="atividades.html">Atividades</a>
-
-        <a href="contato.html">Contato</a>
-
-        <a href="equipe.html">Equipe</a>
-
-        <a href="eventos.html">Eventos</a>
-
-        <a href="galeria.html">Galeria</a>
-
-        <div class="dropdown">
-
-            <button class="dropbtn">
-                Mais ▼
-            </button>
-
-            <div class="dropdown-content">
-
-                <a href="minitlc.html"> Mini TLC </a>
-
-                <a href="sobre.html">Sobre</a>
-
-            </div>
-
+      <div class="dropdown">
+        <button class="dropbtn">Mais ▼</button>
+        <div class="dropdown-content">
+          <a href="minitlc.html">Mini TLC</a>
+          <a href="sobre.html">Sobre</a>
         </div>
+      </div>
 
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
+    <!-- CONTEÚDO -->
+
     <main>
+      <!-- QUEM SOMOS -->
 
-        <section>
+      <section class="section">
+        <h2>Quem Somos</h2>
 
-            <h2>Quem Somos</h2>
+        <p>
+          O TLC é um movimento católico voltado à evangelização de jovens
+          através da formação, oração, amizade e esporte.
+        </p>
+      </section>
+
+      <!-- CARROSSEL -->
+
+      <section>
+        <h2>📸 Momentos TLC</h2>
+
+        <div class="carrossel">
+          <img src="img/foto1.jpg" class="slide ativo" alt="Momento TLC" />
+
+          <img src="img/foto2.jpg" class="slide" alt="Momento TLC" />
+
+          <img src="img/foto3.jpg" class="slide" alt="Momento TLC" />
+
+          <img src="img/foto4.jpg" class="slide" alt="Momento TLC" />
+
+          <img src="img/foto5.jpg" class="slide" alt="Momento TLC" />
+
+          <img src="img/foto6.jpg" class="slide" alt="Momento TLC" />
+
+          <button class="anterior">&#10094;</button>
+
+          <button class="proximo">&#10095;</button>
+
+          <div class="indicadores">
+            <span class="bolinha ativa"></span>
+
+            <span class="bolinha"></span>
+
+            <span class="bolinha"></span>
+
+            <span class="bolinha"></span>
+
+            <span class="bolinha"></span>
+
+            <span class="bolinha"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTATÍSTICAS -->
+
+      <section class="section">
+        <h2>Números do Mini TLC</h2>
+
+        <div class="estatisticas">
+          <div class="estatistica">
+            <h3 class="contador-numero" data-alvo="93">0</h3>
+
+            <p>Edições do Mini TLC</p>
+          </div>
+
+          <div class="estatistica">
+            <h3 class="contador-numero" data-alvo="5766">0</h3>
+
+            <p>Jovens Impactados</p>
+          </div>
+
+          <div class="estatistica">
+            <h3 class="contador-numero" data-alvo="62">0</h3>
+
+            <p>Vagas por Edição</p>
+          </div>
+
+          <div class="estatistica">
+            <h3 class="contador-numero" data-alvo="28">0</h3>
+
+            <p>Anos de História</p>
+          </div>
+        </div>
+
+        <p class="estatisticas-info">
+          Desde dezembro de 1998, mais de 5.700 adolescentes já viveram a
+          experiência transformadora do Mini TLC.
+        </p>
+      </section>
+
+      <!-- HERO -->
+
+      <section class="hero">
+        <h2>TLC - Atletas de Cristo</h2>
+
+        <p>Transformando vidas através da fé, do esporte e da evangelização.</p>
+
+        <a href="sobre.html" class="btn"> Conheça o TLC </a>
+      </section>
+
+      <!-- NOSSAS ÁREAS -->
+
+      <section>
+        <h2>Nossas Áreas</h2>
+
+        <div class="eventos-grid">
+          <div class="evento-card">
+            <div class="evento-icone">⚽</div>
+
+            <h3>Esporte</h3>
 
             <p>
-
-                O TLC é um movimento católico voltado
-                à evangelização de jovens através da
-                formação, oração, amizade e esporte.
-
+              Treinos, amistosos e campeonatos voltados para a integração dos
+              jovens.
             </p>
 
-        </section>
+            <a href="atividades.html" class="btn-evento"> Saiba Mais </a>
+          </div>
 
-        <section class="hero">
+          <div class="evento-card">
+            <div class="evento-icone">🙏</div>
 
-            <h2>TLC - Atletas de Cristo</h2>
+            <h3>Espiritualidade</h3>
+
+            <p>Momentos de oração, adoração e crescimento na fé.</p>
+
+            <a href="atividades.html" class="btn-evento"> Saiba Mais </a>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-icone">📖</div>
+
+            <h3>Formação</h3>
+
+            <p>Estudos bíblicos, encontros e formação cristã para os jovens.</p>
+
+            <a href="atividades.html" class="btn-evento"> Saiba Mais </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOSSA MISSÃO -->
+
+      <section class="section">
+        <h2>Nossa Missão</h2>
+
+        <p>
+          Evangelizar e formar jovens discípulos de Cristo por meio da oração,
+          do esporte, da amizade e do serviço.
+        </p>
+      </section>
+
+      <!-- TESTEMUNHOS -->
+
+      <section class="section">
+        <h2>💬 Testemunhos</h2>
+
+        <div class="testemunhos">
+          <button id="anterior-testemunho">←</button>
+
+          <div class="testemunho">
+            <p id="texto-testemunho">
+              "O TLC me ajudou a crescer na fé e encontrar amigos para toda a
+              vida."
+            </p>
+          </div>
+
+          <button id="proximo-testemunho">→</button>
+        </div>
+      </section>
+
+      <!-- EVENTO DESTAQUE -->
+
+      <section class="evento-destaque">
+        <span class="badge-evento"> 🔥 Inscrições Abertas </span>
+
+        <h2>93º Mini TLC</h2>
+
+        <p class="evento-data">📅 15 a 17 de outubro de 2027</p>
+
+        <p class="evento-descricao">
+          Um final de semana de fé, amizade, oração, diversão e encontro com
+          Cristo.
+        </p>
+
+        <div class="evento-info">
+          <div class="info-card">
+            <h3 id="vagas-restantes">62</h3>
+
+            <span> Vagas Restantes </span>
+          </div>
+
+          <div class="info-card">
+            <h3 id="contador">Carregando...</h3>
+
+            <span> Tempo Restante </span>
+          </div>
+        </div>
+
+        <div class="barra-vagas">
+          <div id="progresso-vagas"></div>
+        </div>
+
+        <p id="texto-vagas">0 inscritos de 62 vagas</p>
+
+        <a href="minitlc.html" class="btn btn-evento" id="link-inscricao">
+          Fazer Inscrição
+        </a>
+      </section>
+
+      <!-- PRÓXIMOS EVENTOS -->
+      <section>
+        <h2>Próximos Eventos</h2>
+
+        <div class="eventos-grid">
+          <div class="evento-card">
+            <div class="evento-icone">⚽</div>
+
+            <h3>Campeonato TLC</h3>
 
             <p>
-                Transformando vidas através da Fé,
-                do Esporte e da Evangelização.
+              Integração entre jovens através do esporte e da evangelização.
             </p>
 
-            <a href="sobre.html" class="btn">
-                Conheça o TLC
-            </a>
+            <a href="eventos.html" class="btn-evento"> Saiba Mais </a>
+          </div>
 
-        </section>
+          <div class="evento-card">
+            <div class="evento-icone">⛺</div>
 
-        <section>
+            <h3>Retiro de Jovens</h3>
 
-            <h2>Números do TLC</h2>
+            <p>Um encontro especial para fortalecer a amizade com Deus.</p>
 
-            <div class="estatisticas">
+            <a href="eventos.html" class="btn-evento"> Saiba Mais </a>
+          </div>
 
-                <div class="estatistica">
-                    <h3>62+</h3>
-                    <p>Participantes MINI TLC</p>
-                </div>
+          <div class="evento-card">
+            <div class="evento-icone">🙏</div>
 
-                <div class="estatistica">
-                    <h3>93</h3>
-                    <p>Edições MINI TLC</p>
-                </div>
+            <h3>Momento de Oração</h3>
 
-                <div class="estatistica">
-                    <h3>4</h3>
-                    <p>Atividades</p>
-                </div>
+            <p>Adoração, louvor e oração em comunidade.</p>
 
-                <div class="estatistica">
-                    <h3>3</h3>
-                    <p>Grandes Eventos</p>
-                </div>
+            <a href="eventos.html" class="btn-evento"> Saiba Mais </a>
+          </div>
 
-            </div>
+          <div class="evento-card">
+            <div class="evento-icone">🎶</div>
 
-        </section>
+            <h3>Noite de Fervo</h3>
 
-        <section>
+            <p>Música, alegria e evangelização para toda a juventude.</p>
 
-            <h2>Nossas Áreas</h2>
-
-            <div class="cards">
-
-                <a href="esportes.html" class="card-link">
-                    <div class="card">
-                        <h3>⚽ Esporte</h3>
-                        <p>Treinos, amistosos e campeonatos.</p>
-                    </div>
-                </a>
-
-                <a href="esportes.html" class="card-link">
-                    <div class="card">
-                        <h3>🙏 Espiritualidade</h3>
-                        <p>Momentos de oração, adoração e crescimento na fé.</p>
-                    </div>
-                </a>
-
-                <a href="esportes.html" class="card-link">
-                    <div class="card">
-                        <h3>📖 Formação</h3>
-                        <p>Estudos bíblicos e desenvolvimento cristão.</p>
-                    </div>
-                </a>
-
-            </div>
-
-        </section>
-
-        <section>
-
-            <h2>Nossa Missão</h2>
-
-            <p>
-                Evangelizar e formar jovens discípulos de Cristo
-                por meio da oração, do esporte, da amizade e do serviço.
-            </p>
-
-        </section>
-
-        <section>
-            <h2>Testemunhos</h2>
-            <div class="cards">
-                <div class="card">
-                    <p>"O TLC me ajudou a crescer na fé e encontrar amigos para toda a vida."</p>
-                </div>
-                <div class="card">
-                    <p>"O Mini TLC foi uma experiência que marcou profundamente minha caminhada."</p>
-                </div>
-                <div class="card">
-                    <p>"Aprendi que o esporte também pode ser um caminho de evangelização."</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-
-            <h2>Nossos Valores</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>✝ Fé</h3>
-                    <p>Cristo no centro de tudo.</p>
-                </div>
-                <div class="card">
-                    <h3>🤝 Comunhão</h3>
-                    <p>Crescer juntos como família.</p>
-                </div>
-                <div class="card">
-                    <h3>⚽ Esporte</h3>
-                    <p>Utilizar o esporte para evangelizar.</p>
-                </div>
-                <div class="card">
-                    <h3>📖 Formação</h3>
-                    <p>Conhecer mais a Palavra de Deus.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Próximo Grande Evento</h2>
-            <h3>🔥 93º MINI TLC</h3>
-            <p>
-                Retiro para adolescentes de 14 a 17 anos.
-                62 vagas disponíveis.
-            </p>
-            <a href="minitlc.html" class="btn">
-                Saiba Mais
-            </a>
-        </section>
-
-        <section>
-            <h2>Próximos Eventos</h2>
-            <ul>
-                <li>⚽ Campeonato Atletas de Cristo</li>
-                <li>⛺ Retiro de Jovens</li>
-                <li>🙏 Momentos de oração</li>
-                <li>🎶 Noite de Fervo</li>
-            </ul>
-        </section>
-
+            <a href="eventos.html" class="btn-evento"> Saiba Mais </a>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- FOOTER -->
+
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"> Início </a>
+            </li>
+
+            <li>
+              <a href="sobre.html"> Sobre </a>
+            </li>
+
+            <li>
+              <a href="eventos.html"> Eventos </a>
+            </li>
+
+            <li>
+              <a href="contato.html"> Contato </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
-    <a href="#" class="topo">⬆</a>
+    <!-- VOLTAR AO TOPO -->
+
+    <a href="#" class="topo"> ⬆ </a>
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

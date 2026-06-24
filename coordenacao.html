@@ -1,88 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coordenação TLC</title>
-    <meta name="description" content="Equipe responsável pela organização, planejamento e
-    liderança do movimento TLC.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <meta
+      name="description"
+      content="Equipe responsável pela organização, planejamento e
+    liderança do movimento TLC."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body>
+  <body>
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+      <p>Carregando...</p>
+    </div>
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
     <header>
-        <h1>👑 Coordenação</h1>
-        <p>Liderança e organização do TLC</p>
+      <h1>👑 Coordenação</h1>
+      <p>Liderança e organização do TLC</p>
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="equipe.html">Equipe</a>
-        <a href="contato.html">Contato</a>
+      <button class="menu-toggle">☰</button>
+
+      <a href="index.html">Início</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
     <main>
+      <section class="hero">
+        <h2>Equipe de Coordenação</h2>
 
-        <section class="hero">
+        <p>
+          Responsável pela condução, planejamento e organização das atividades e
+          eventos do TLC.
+        </p>
+      </section>
 
-            <h2>Equipe de Coordenação</h2>
+      <section class="section">
+        <h2>Missão</h2>
 
-            <p>
-                Responsável pela condução, planejamento e organização
-                das atividades e eventos do TLC.
-            </p>
+        <p>
+          Garantir que todas as atividades sejam realizadas com excelência,
+          unidade e espírito cristão.
+        </p>
+      </section>
 
-        </section>
-
-        <section>
-
-            <h2>Missão</h2>
-
-            <p>
-                Garantir que todas as atividades sejam realizadas com
-                excelência, unidade e espírito cristão.
-            </p>
-
-        </section>
-
-        <section>
-            <h2>responsabilidades</h2>
-            <ul>
-                <li>👑 planejamento dos eventos</li>
-                <li>📅 Organização do calendário anual</li>
-                <li>🤝 Integração das equipes</li>
-                <li>🙏 Acompanhamento espiritual do movimento</li>
-                <li>🎯 Coordenação dos retiros e Encontros</li>
-            </ul>
-        </section>
-
+      <section class="section">
+        <h2>responsabilidades</h2>
+        <ul>
+          <li>👑 planejamento dos eventos</li>
+          <li>📅 Organização do calendário anual</li>
+          <li>🤝 Integração das equipes</li>
+          <li>🙏 Acompanhamento espiritual do movimento</li>
+          <li>🎯 Coordenação dos retiros e Encontros</li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+
+            <li><a href="sobre.html">Sobre</a></li>
+
+            <li><a href="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
     <a href="#" class="topo">⬆</a>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

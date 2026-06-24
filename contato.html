@@ -1,105 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body>
+  <body>
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+      <p>Carregando...</p>
+    </div>
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
     <header>
-        <h1>✝️ TLC - Atletas de Cristo</h1>
+      <h1>✝️ TLC - Atletas de Cristo</h1>
     </header>
 
     <nav>
+      <button class="menu-toggle">☰</button>
 
-        <button class="menu-toggle">☰</button>
+      <a href="index.html">Início</a>
+      <a href="atividades.html">Atividades</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+      <a href="faq.html">FAQ</a>
 
-        <a href="index.html">Início</a>
-
-        <a href="atividades.html">Atividade</a>
-
-        <a href="equipe.html">Equipe</a>
-
-        <a href="eventos.html">Eventos</a>
-
-        <a href="galeria.html">Galeria</a>
-
-        <div class="dropdown">
-
-            <button class="dropbtn">
-                Mais ▼
-            </button>
-
-            <div class="dropdown-content">
-
-                <a href="minitlc.html#inscricao"> Mini TLC </a>
-
-                <a href="sobre.html">Sobre</a>
-
-            </div>
-
+      <div class="dropdown">
+        <button class="dropbtn">Mais ▼</button>
+        <div class="dropdown-content">
+          <a href="minitlc.html">Mini TLC</a>
+          <a href="sobre.html">Sobre</a>
         </div>
+      </div>
 
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
-
     <main>
+      <section class="section">
+        <h2>Entre em Contato</h2>
 
-        <section>
-            <h2>Entre em Contato</h2>
+        <form>
+          <label>Nome</label>
+          <input type="text" />
 
-            <form>
+          <label>Email</label>
+          <input type="email" />
 
-                <label>Nome</label>
-                <input type="text">
+          <label>Mensagem</label>
+          <textarea rows="5"></textarea>
 
-                <label>Email</label>
-                <input type="email">
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
 
-                <label>Mensagem</label>
-                <textarea rows="5"></textarea>
-
-                <button type="submit">Enviar</button>
-
-            </form>
-
-        </section>
-
-        <section>
-            <h2>Redes Sociais</h2>
-            <p>📷 Instagram: @TLCuritiba</p>
-            <p>📱 WhatsApp: (43) 99999-9999</p>
-        </section>
-
+      <section class="section">
+        <h2>Redes Sociais</h2>
+        <p>📷 Instagram: @TLCuritiba</p>
+        <p>📱 WhatsApp: (43) 99999-9999</p>
+      </section>
     </main>
 
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+
+            <li><a href="sobre.html">Sobre</a></li>
+
+            <li><a href="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
     <a href="#" class="topo">⬆</a>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

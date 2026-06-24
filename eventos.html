@@ -1,159 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos TLC</title>
-    <meta name="description" content="Confira campeonatos, retiros, vigílias e outros eventos
-    realizados pelo TLC.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <meta
+      name="description"
+      content="Confira campeonatos, retiros, vigílias e outros eventos
+    realizados pelo TLC."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body>
+  <body>
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+      <p>Carregando...</p>
+    </div>
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
     <header>
-        <h1>✝️ TLC - Atletas de Cristo</h1>
+      <h1>✝️ TLC - Atletas de Cristo</h1>
     </header>
 
     <nav>
+      <button class="menu-toggle">☰</button>
 
-        <button class="menu-toggle">☰</button>
+      <a href="index.html">Início</a>
+      <a href="atividades.html">Atividades</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+      <a href="faq.html">FAQ</a>
 
-        <a href="index.html">Início</a>
-
-        <a href="atividades.html">Atividades</a>
-
-        <a href="contato.html">Contato</a>
-
-        <a href="equipe.html">Equipe</a>
-
-        <a href="galeria.html">Galeria</a>
-
-        <div class="dropdown">
-
-            <button class="dropbtn">
-                Mais ▼
-            </button>
-
-            <div class="dropdown-content">
-
-                <a href="minitlc.html"> Mini TLC </a>
-
-                <a href="sobre.html">Sobre</a>
-
-            </div>
-
+      <div class="dropdown">
+        <button class="dropbtn">Mais ▼</button>
+        <div class="dropdown-content">
+          <a href="minitlc.html">Mini TLC</a>
+          <a href="sobre.html">Sobre</a>
         </div>
+      </div>
 
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
-
     <main>
+      <section class="hero">
+        <h2>Eventos TLC</h2>
+        <p>Vivências que unem fé, amizade, esporte e evangelização.</p>
+      </section>
 
-        <section class="hero">
-            <h2>Eventos TLC</h2>
-            <p>
-                Vivências que unem fé, amizade, esporte e evangelização.
-            </p>
-        </section>
+      <div class="cards">
+        <div class="card evento-card">
+          <h3>⚽ Campeonato Atletas de Cristo</h3>
 
-        <div class="cards">
+          <p>
+            Um momento de integração através do esporte, promovendo amizade,
+            respeito e espírito cristão.
+          </p>
 
-            <a href="campeonato.html" class="card-link">
+          <p><strong>📅 Data:</strong>17/10/2026</p>
 
-                <section class="card">
-
-                    <h3>⚽ Campeonato Atletas de Cristo</h3>
-
-                    <p>
-                        Um momento de integração através do esporte,
-                        promovendo amizade, respeito e espírito cristão.
-                    </p>
-
-                    <p><strong>📅 Data:</strong>17/10/2026</p>
-
-                </section>
-
-            </a>
-
-            <a href="campeonato.html" class="card-link">
-
-                <section class="card">
-
-                    <h3>⛺ Retiro de Jovens</h3>
-
-                    <p>
-                        Uma experiência intensa de encontro com Deus,
-                        realizada da sexta-feira à noite até domingo à noite.
-                    </p>
-
-                    <p><strong>📅 Data:</strong>16/05/2026</p>
-
-                </section>
-
-            </a>
-
-            <a href="campeonato.html" class="card-link">
-
-                <section class="card">
-
-                    <h3>🌙 Vigília de Oração</h3>
-
-                    <p>
-                        Uma noite inteira dedicada à oração,
-                        adoração e comunhão entre os participantes.
-                    </p>
-
-                    <p><strong>📅 Data:</strong>04/06/2026</p>
-
-                </section>
-
-            </a>
-
+          <div class="botao-centro">
+            <a href="campeonato.html" class="btn-evento"> Saiba Mais </a>
+          </div>
         </div>
 
-        <section>
+        <div class="card evento-card">
+          <h3>⛺ Retiro de Jovens</h3>
 
-            <h2>Calendário TLC</h2>
+          <p>
+            Uma experiência intensa de encontro com Deus, realizada da
+            sexta-feira à noite até domingo à noite.
+          </p>
 
-            <ul>
+          <p><strong>📅 Data:</strong>16/05/2026</p>
 
-                <li>🏆 Campeonato Atletas de Cristo</li>
+          <div class="botao-centro">
+            <a href="retiro.html" class="btn-evento"> Saiba Mais </a>
+          </div>
+        </div>
 
-                <li>⛺ 93º MINI TLC</li>
+        <div class="card evento-card">
+          <h3>🌙 Vigília de Oração</h3>
 
-                <li>🌙 Vigília de Oração</li>
+          <p>
+            Uma noite inteira dedicada à oração, adoração e comunhão entre os
+            participantes.
+          </p>
 
-            </ul>
+          <p><strong>📅 Data:</strong>04/06/2026</p>
 
-        </section>
+          <div class="botao-centro">
+            <a href="vigilia.html" class="btn-evento"> Saiba Mais </a>
+          </div>
+        </div>
+      </div>
 
+      <section class="section">
+        <h2>Calendário TLC</h2>
+
+        <ul>
+          <li>🏆 Campeonato Atletas de Cristo</li>
+
+          <li>⛺ 93º MINI TLC</li>
+
+          <li>🌙 Vigília de Oração</li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+
+            <li><a href="sobre.html">Sobre</a></li>
+
+            <li><a href="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
     <a href="#" class="topo">⬆</a>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

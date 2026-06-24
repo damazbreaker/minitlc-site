@@ -1,114 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galeria TLC</title>
-    <meta name="description" content="Fotos dos retiros, campeonatos, vigílias e
-    atividades realizadas pelo TLC.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <meta
+      name="description"
+      content="Fotos dos retiros, campeonatos, vigílias e
+    atividades realizadas pelo TLC."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body>
+  <body>
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+      <p>Carregando...</p>
+    </div>
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
     <header>
+      <img src="img/logo.png" alt="Logo TLC" class="logo" />
 
-        <img src="img/logo.png" alt="Logo TLC" class="logo">
+      <h1>Galeria TLC</h1>
 
-        <h1>Galeria TLC</h1>
-
-        <p>Momentos especiais da nossa caminhada</p>
-
+      <p>Momentos especiais da nossa caminhada</p>
     </header>
 
     <nav>
+      <button class="menu-toggle">☰</button>
 
-        <button class="menu-toggle">☰</button>
+      <a href="index.html">Início</a>
+      <a href="atividades.html">Atividades</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="equipe.html">Equipe</a>
+      <a href="contato.html">Contato</a>
+      <a href="faq.html">FAQ</a>
 
-        <a href="index.html">Início</a>
-
-        <a href="atividades.html">Atividades</a>
-
-        <a href="contato.html">Contato</a>
-
-        <a href="equipe.html">Equipe</a>
-
-        <a href="eventos.html">Eventos</a>
-
-        <div class="dropdown">
-
-            <button class="dropbtn">
-                Mais ▼
-            </button>
-
-            <div class="dropdown-content">
-
-                <a href="minitlc.html"> Mini TLC </a>
-
-                <a href="sobre.html">Sobre</a>
-
-            </div>
-
+      <div class="dropdown">
+        <button class="dropbtn">Mais ▼</button>
+        <div class="dropdown-content">
+          <a href="minitlc.html">Mini TLC</a>
+          <a href="sobre.html">Sobre</a>
         </div>
+      </div>
 
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
-
     <main>
+      <section class="hero">
+        <h2>Galeria TLC</h2>
 
-        <section class="hero">
+        <p>Confira alguns momentos especiais vividos pelo TLC.</p>
+      </section>
 
-            <h2>Galeria TLC</h2>
-
-            <p>
-                Confira alguns momentos especiais
-                vividos pelo TLC.
-            </p>
-
-        </section>
+      <section>
+        <h2>Momentos do TLC</h2>
 
         <div class="galeria">
+          <img src="img/foto1.jpg" alt="Retiro" />
 
-            <img src="img/foto1.jpg" alt="Retiro">
+          <img src="img/foto2.jpg" alt="Campeonato" />
 
-            <img src="img/foto2.jpg" alt="Campeonato">
+          <img src="img/foto3.jpg" alt="Vigília" />
 
-            <img src="img/foto3.jpg" alt="Vigília">
+          <img src="img/foto4.jpg" alt="Formação" />
 
-            <img src="img/foto4.jpg" alt="Formação">
+          <img src="img/foto5.jpg" alt="Futebol" />
 
-            <img src="img/foto5.jpg" alt="Futebol">
-
-            <img src="img/foto6.jpg" alt="Vôlei">
-
+          <img src="img/foto6.jpg" alt="Vôlei" />
         </div>
-
+      </section>
     </main>
 
+    <div id="lightbox">
+      <span id="fechar">&times;</span>
+      <img id="imagem-ampliada" />
+    </div>
+
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+
+            <li><a href="sobre.html">Sobre</a></li>
+
+            <li><a href="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
     <a href="#" class="topo">⬆</a>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

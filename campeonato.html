@@ -1,106 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campeonato TLC</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+  </head>
 
-<body>
+  <body>
+    <div id="loader">
+      <img src="img/logo.png" alt="Logo TLC" />
+      <p>Carregando...</p>
+    </div>
+
     <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
-        💬
+      💬
     </a>
 
     <header>
-        <h1>⚽ Campeonato TLC</h1>
-        <p>Esporte, amizade e evangelização</p>
+      <h1>⚽ Campeonato TLC</h1>
+      <p>Esporte, amizade e evangelização</p>
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="galeria.html">Galeria</a>
+      <button class="menu-toggle">☰</button>
+
+      <a href="index.html">Início</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="contato.html">Contato</a>
+
+      <button id="dark-mode-btn">🌓</button>
     </nav>
 
-
     <main>
+      <section class="hero">
+        <h2>Campeonato Atletas de Cristo</h2>
+        <p>Competir com respeito, amizade e espírito cristão.</p>
+      </section>
 
-        <section class="hero">
-            <h2>Campeonato Atletas de Cristo</h2>
-            <p>
-                Competir com respeito, amizade e espírito cristão.
-            </p>
-        </section>
+      <section class="section">
+        <h2>Objetivo</h2>
 
-        <section>
-            <h2>Objetivo</h2>
+        <p>
+          Promover integração entre jovens através do esporte, fortalecendo
+          valores cristãos dentro e fora das quadras.
+        </p>
+      </section>
 
-            <p>
-                Promover integração entre jovens através do esporte,
-                fortalecendo valores cristãos dentro e fora das quadras.
-            </p>
-        </section>
+      <section class="section">
+        <h2>Modalidades</h2>
 
-        <section>
-            <h2>Modalidades</h2>
+        <ul>
+          <li>⚽ Futebol</li>
+          <li>🏐 Vôlei</li>
+          <li>🏃 Corrida</li>
+          <li>🏓 Tênis de Mesa</li>
+        </ul>
+      </section>
 
-            <ul>
-                <li>⚽ Futebol</li>
-                <li>🏐 Vôlei</li>
-                <li>🏃 Corrida</li>
-                <li>🏓 Tênis de Mesa</li>
-            </ul>
-        </section>
+      <section class="section">
+        <h2>Formato</h2>
 
-        <section>
-            <h2>Formato</h2>
+        <p>
+          A duração do campeonato depende da quantidade de equipes, modalidades
+          e participantes inscritos.
+        </p>
 
-            <p>
-                A duração do campeonato depende da quantidade de equipes,
-                modalidades e participantes inscritos.
-            </p>
+        <p>
+          Todas as partidas começam com oração e terminam com momento de
+          confraternização.
+        </p>
+      </section>
 
-            <p>
-                Todas as partidas começam com oração e terminam com
-                momento de confraternização.
-            </p>
-        </section>
+      <section class="section">
+        <h2>Premiação</h2>
 
-        <section>
-            <h2>Premiação</h2>
-
-            <ul>
-                <li>🏆 Troféus</li>
-                <li>🥇 Medalhas</li>
-                <li>⭐ Destaques esportivos</li>
-                <li>🤝 Troféu Fair Play</li>
-            </ul>
-        </section>
-
+        <ul>
+          <li>🏆 Troféus</li>
+          <li>🥇 Medalhas</li>
+          <li>⭐ Destaques esportivos</li>
+          <li>🤝 Troféu Fair Play</li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-        <p>
-            Fé • Esporte • Evangelização
-        </p>
-        <p>
-            Setor COP
-        </p>
-        <p>
-            @minitlc.cop
-        </p>
-        <p>
-            © 2026 TLC - Todos os direitos reservados
-        </p>
+      <div class="footer-grid">
+        <div>
+          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+
+          <h3>TLC - Atletas de Cristo</h3>
+
+          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+
+            <li><a href="sobre.html">Sobre</a></li>
+
+            <li><a href="eventos.html">Eventos</a></li>
+
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+
+          <p>📍 Setor COP</p>
+
+          <p>📸 @minitlc.cop</p>
+
+          <p>✉ contato@tlc.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 TLC - Atletas de Cristo • Todos os direitos reservados
+      </div>
     </footer>
 
     <a href="#" class="topo">⬆</a>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
