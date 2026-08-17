@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos TLC</title>
+
+    <title>Eventos | TLC - Atletas de Cristo</title>
+
     <meta
       name="description"
-      content="Confira campeonatos, retiros, vigílias e outros eventos
-    realizados pelo TLC."
+      content="Confira campeonatos, retiros, vigílias e outros eventos realizados pelo TLC - Atletas de Cristo."
     />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
   </head>
 
   <body>
     <div id="loader">
-      <img src="img/logo.png" alt="Logo TLC" />
+      <img src="img/logo.png" alt="Logo TLC - Atletas de Cristo" />
       <p>Carregando...</p>
     </div>
 
-    <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
+    <a
+      href="https://wa.me/5541999999999"
+      class="whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar pelo WhatsApp"
+    >
       💬
     </a>
 
@@ -28,7 +36,7 @@
     </header>
 
     <nav>
-      <button class="menu-toggle">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
       <a href="index.html">Início</a>
       <a href="atividades.html">Atividades</a>
@@ -40,23 +48,29 @@
 
       <div class="dropdown">
         <button class="dropbtn">Mais ▼</button>
+
         <div class="dropdown-content">
           <a href="minitlc.html">Mini TLC</a>
           <a href="sobre.html">Sobre</a>
         </div>
       </div>
 
-      <button id="dark-mode-btn">🌓</button>
+      <button id="dark-mode-btn" aria-label="Alternar modo escuro">
+        🌓
+      </button>
     </nav>
 
     <main>
       <section class="hero">
         <h2>Eventos TLC</h2>
-        <p>Vivências que unem fé, amizade, esporte e evangelização.</p>
+
+        <p>
+          Vivências que unem fé, amizade, esporte e evangelização.
+        </p>
       </section>
 
-      <div class="cards">
-        <div class="card evento-card">
+      <section class="cards">
+        <article class="card evento-card">
           <h3>⚽ Campeonato Atletas de Cristo</h3>
 
           <p>
@@ -64,14 +78,18 @@
             respeito e espírito cristão.
           </p>
 
-          <p><strong>📅 Data:</strong>17/10/2026</p>
+          <p>
+            <strong>📅 Data:</strong> 17/10/2026
+          </p>
 
           <div class="botao-centro">
-            <a href="campeonato.html" class="btn-evento"> Saiba Mais </a>
+            <a href="campeonato.html" class="btn-evento">
+              Saiba Mais
+            </a>
           </div>
-        </div>
+        </article>
 
-        <div class="card evento-card">
+        <article class="card evento-card">
           <h3>⛺ Retiro de Jovens</h3>
 
           <p>
@@ -79,14 +97,18 @@
             sexta-feira à noite até domingo à noite.
           </p>
 
-          <p><strong>📅 Data:</strong>16/05/2026</p>
+          <p>
+            <strong>📅 Data:</strong> 16/05/2026
+          </p>
 
           <div class="botao-centro">
-            <a href="retiro.html" class="btn-evento"> Saiba Mais </a>
+            <a href="retiro.html" class="btn-evento">
+              Saiba Mais
+            </a>
           </div>
-        </div>
+        </article>
 
-        <div class="card evento-card">
+        <article class="card evento-card">
           <h3>🌙 Vigília de Oração</h3>
 
           <p>
@@ -94,22 +116,24 @@
             participantes.
           </p>
 
-          <p><strong>📅 Data:</strong>04/06/2026</p>
+          <p>
+            <strong>📅 Data:</strong> 04/06/2026
+          </p>
 
           <div class="botao-centro">
-            <a href="vigilia.html" class="btn-evento"> Saiba Mais </a>
+            <a href="vigilia.html" class="btn-evento">
+              Saiba Mais
+            </a>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <section class="section">
+      <section class="hero">
         <h2>Calendário TLC</h2>
 
         <ul>
           <li>🏆 Campeonato Atletas de Cristo</li>
-
           <li>⛺ 93º MINI TLC</li>
-
           <li>🌙 Vigília de Oração</li>
         </ul>
       </section>
@@ -122,7 +146,9 @@
 
           <h3>TLC - Atletas de Cristo</h3>
 
-          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+          <p>
+            Evangelizando jovens através da fé, do esporte e da amizade.
+          </p>
         </div>
 
         <div>
@@ -130,11 +156,8 @@
 
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-
             <li><a href="sobre.html">Sobre</a></li>
-
             <li><a href="eventos.html">Eventos</a></li>
-
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
@@ -143,9 +166,7 @@
           <h3>Contato</h3>
 
           <p>📍 Setor COP</p>
-
           <p>📸 @minitlc.cop</p>
-
           <p>✉ contato@tlc.com.br</p>
         </div>
       </div>
@@ -155,7 +176,7 @@
       </div>
     </footer>
 
-    <a href="#" class="topo">⬆</a>
+    <a href="#" class="topo" aria-label="Voltar ao topo">⬆</a>
 
     <script src="script.js"></script>
   </body>

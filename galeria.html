@@ -2,24 +2,35 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galeria TLC</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Galeria | TLC - Atletas de Cristo</title>
+
     <meta
       name="description"
-      content="Fotos dos retiros, campeonatos, vigílias e
-    atividades realizadas pelo TLC."
+      content="Fotos dos retiros, campeonatos, vigílias e atividades realizadas pelo TLC."
     />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
   </head>
 
   <body>
     <div id="loader">
-      <img src="img/logo.png" alt="Logo TLC" />
+      <img src="img/logo.png" alt="Logo TLC - Atletas de Cristo" />
       <p>Carregando...</p>
     </div>
 
-    <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
+    <a
+      href="https://wa.me/5541999999999"
+      class="whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar pelo WhatsApp"
+    >
       💬
     </a>
 
@@ -28,11 +39,13 @@
 
       <h1>Galeria TLC</h1>
 
-      <p>Momentos especiais da nossa caminhada</p>
+      <p>
+        Momentos especiais da nossa caminhada
+      </p>
     </header>
 
     <nav>
-      <button class="menu-toggle">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
       <a href="index.html">Início</a>
       <a href="atividades.html">Atividades</a>
@@ -44,44 +57,55 @@
 
       <div class="dropdown">
         <button class="dropbtn">Mais ▼</button>
+
         <div class="dropdown-content">
           <a href="minitlc.html">Mini TLC</a>
           <a href="sobre.html">Sobre</a>
         </div>
       </div>
 
-      <button id="dark-mode-btn">🌓</button>
+      <button id="dark-mode-btn" aria-label="Alternar modo escuro">
+        🌓
+      </button>
     </nav>
 
     <main>
       <section class="hero">
         <h2>Galeria TLC</h2>
 
-        <p>Confira alguns momentos especiais vividos pelo TLC.</p>
+        <p>
+          Confira alguns momentos especiais vividos pelo TLC.
+        </p>
       </section>
 
       <section>
         <h2>Momentos do TLC</h2>
 
         <div class="galeria">
-          <img src="img/foto1.jpg" alt="Retiro" />
+          <img src="img/foto1.jpg" alt="Momento do retiro TLC" />
 
-          <img src="img/foto2.jpg" alt="Campeonato" />
+          <img src="img/foto2.jpg" alt="Campeonato TLC" />
 
-          <img src="img/foto3.jpg" alt="Vigília" />
+          <img src="img/foto3.jpg" alt="Vigília de oração TLC" />
 
-          <img src="img/foto4.jpg" alt="Formação" />
+          <img src="img/foto4.jpg" alt="Formação TLC" />
 
-          <img src="img/foto5.jpg" alt="Futebol" />
+          <img src="img/foto5.jpg" alt="Futebol TLC" />
 
-          <img src="img/foto6.jpg" alt="Vôlei" />
+          <img src="img/foto6.jpg" alt="Vôlei TLC" />
         </div>
       </section>
     </main>
 
     <div id="lightbox">
-      <span id="fechar">&times;</span>
-      <img id="imagem-ampliada" />
+      <button id="fechar" aria-label="Fechar imagem">
+        &times;
+      </button>
+
+      <img
+        id="imagem-ampliada"
+        alt="Imagem ampliada da galeria"
+      />
     </div>
 
     <footer>
@@ -91,7 +115,9 @@
 
           <h3>TLC - Atletas de Cristo</h3>
 
-          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+          <p>
+            Evangelizando jovens através da fé, do esporte e da amizade.
+          </p>
         </div>
 
         <div>
@@ -99,11 +125,8 @@
 
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-
             <li><a href="sobre.html">Sobre</a></li>
-
             <li><a href="eventos.html">Eventos</a></li>
-
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
@@ -112,9 +135,7 @@
           <h3>Contato</h3>
 
           <p>📍 Setor COP</p>
-
           <p>📸 @minitlc.cop</p>
-
           <p>✉ contato@tlc.com.br</p>
         </div>
       </div>
@@ -124,7 +145,7 @@
       </div>
     </footer>
 
-    <a href="#" class="topo">⬆</a>
+    <a href="#" class="topo" aria-label="Voltar ao topo">⬆</a>
 
     <script src="script.js"></script>
   </body>

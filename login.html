@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login - Mini TLC | Atletas de Cristo" />
+    <title>Login | Mini TLC</title>
+    <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <!-- FUNDO -->
+    <div class="background">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+
+      <div class="background-shape shape-1"></div>
+      <div class="background-shape shape-2"></div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="login-page">
+      <section class="login-container">
+        <!-- LADO ESQUERDO -->
+        <div class="login-brand">
+          <div class="brand-content">
+            <a href="index.html" class="brand-logo">
+              <img src="img/logo.png" alt="Logo Mini TLC" />
+            </a>
+
+            <span class="brand-badge"> MINI TLC </span>
+
+            <h1>Bem-vindo de volta!</h1>
+
+            <p>
+              Entre na sua conta e continue vivendo essa experiência de fé,
+              esporte, comunhão e evangelização.
+            </p>
+
+            <div class="brand-motto">
+              <span>Fé</span>
+              <strong>•</strong>
+              <span>Esporte</span>
+              <strong>•</strong>
+              <span>Comunhão</span>
+              <strong>•</strong>
+              <span>Evangelização</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD DE LOGIN -->
+        <div class="login-card">
+          <div class="mobile-logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="Logo Mini TLC" />
+            </a>
+          </div>
+
+          <div class="login-header">
+            <span class="login-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 12a5 5 0 1 0 0-10
+                5 5 0 0 0 0 10Zm0-8
+                a3 3 0 1 1 0 6
+                3 3 0 0 1 0-6Zm0 10
+                c-5 0-9 2.5-9 6v2h18v-2
+                c0-3.5-4-6-9-6Zm-6.8
+                6c.7-2.1 3.3-4 6.8-4
+                s6.1 1.9 6.8 4H5.2Z"
+                />
+              </svg>
+            </span>
+
+            <h2>Entrar</h2>
+
+            <p>Acesse sua conta do Mini TLC</p>
+          </div>
+
+          <!-- FORMULÁRIO -->
+          <form id="loginForm" class="login-form" novalidate>
+            <!-- EMAIL -->
+            <div class="input-group">
+              <label for="email"> E-mail </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 4H4a2 2 0 0 0-2 2v12
+                    a2 2 0 0 0 2 2h16a2 2 0
+                    0 0 0 2-2V6a2 2 0 0
+                    0 0-2-2Zm0 4-8 5-8-5V6l8
+                    5 8-5v2Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  autocomplete="email"
+                />
+              </div>
+
+              <small class="field-error" id="emailError"></small>
+            </div>
+
+            <!-- SENHA -->
+            <div class="input-group">
+              <div class="label-row">
+                <label for="password"> Senha </label>
+
+                <a href="#" id="forgotPassword"> Esqueci minha senha </a>
+              </div>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M17 8h-1V6a4 4 0 0
+                    0-8 0v2H7a2 2 0 0
+                    0-2 2v10a2 2 0 0
+                    0 2 2h10a2 2 0 0
+                    0 2-2V10a2 2 0 0
+                    0-2-2Zm-7-2a2 2 0
+                    0 1 4 0v2h-4V6Zm5
+                    14H9a1 1 0 0 1-1-1
+                    v-8a1 1 0 0 1 1-1
+                    h6a1 1 0 0 1 1 1v8
+                    a1 1 0 0 1-1 1Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Digite sua senha"
+                  autocomplete="current-password"
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="passwordToggle"
+                  aria-label="Mostrar senha"
+                >
+                  <svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 5C7 5 2.7 8.1 1 12
+                    c1.7 3.9 6 7 11 7s9.3-3.1
+                    11-7c-1.7-3.9-6-7-11-7Zm0
+                    12a5 5 0 1 1 0-10 5 5 0
+                    0 1 0 10Zm0-8a3 3 0
+                    1 0 0 6 3 3 0 0 0 0-6Z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="eye-closed"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m3 2 19 19-1.4 1.4-3.1-3.1
+                    A11.9 11.9 0 0 1 12 20
+                    c-5 0-9.3-3.1-11-8
+                    a12.7 12.7 0 0 1 4.2-5.5L1.6
+                    3.4 3 2Zm9 5a5 5 0 0 1
+                    5 5c0 .7-.1 1.3-.4 1.9l-6.5-6.5
+                    C10.7 7.1 11.3 7 12 7Zm0
+                    10c1.3 0 2.5-.2 3.5-.7l-1.6-1.6
+                    A3 3 0 0 1 9.3 10l-1.6-1.6
+                    A10.5 10.5 0 0 0 3.1 12
+                    c1.7 3.1 4.9 5 8.9 5Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <small class="field-error" id="passwordError"></small>
+            </div>
+
+            <!-- LEMBRAR -->
+            <div class="form-options">
+              <label class="remember">
+                <input type="checkbox" id="remember" />
+
+                <span class="custom-checkbox"></span>
+
+                <span> Lembrar de mim </span>
+              </label>
+            </div>
+
+            <!-- MENSAGEM -->
+            <div class="form-message" id="formMessage" role="alert"></div>
+
+            <!-- BOTÃO -->
+            <button type="submit" class="login-button" id="loginButton">
+              <span class="button-text"> ENTRAR </span>
+
+              <span class="button-loader"></span>
+
+              <svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m13 5 7 7-7 7-1.4-1.4
+                4.6-4.6H4v-2h12.2l-4.6-4.6L13
+                5Z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <!-- CADASTRO -->
+          <div class="register">
+            <span> Ainda não tem uma conta? </span>
+
+            <a href="cadastro.html"> Criar conta </a>
+          </div>
+
+          <!-- VOLTAR -->
+          <a href="index.html" class="back-home">
+            <span>←</span>
+            Voltar para o site
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

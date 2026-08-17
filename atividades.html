@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atividades</title>
+
+    <title>Atividades | TLC - Atletas de Cristo</title>
+    <meta
+      name="description"
+      content="Conheça as atividades do TLC - Atletas de Cristo: futebol, vôlei, oração e formação cristã."
+    />
+
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div id="loader">
-      <img src="img/logo.png" alt="Logo TLC" />
+      <img src="img/logo.png" alt="Logo TLC - Atletas de Cristo" />
       <p>Carregando...</p>
     </div>
 
-    <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
+    <a
+      href="https://wa.me/5541999999999"
+      class="whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar pelo WhatsApp"
+    >
       💬
     </a>
 
@@ -23,7 +35,7 @@
     </header>
 
     <nav>
-      <button class="menu-toggle">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
       <a href="index.html">Início</a>
       <a href="atividades.html">Atividades</a>
@@ -31,75 +43,92 @@
       <a href="galeria.html">Galeria</a>
       <a href="equipe.html">Equipe</a>
       <a href="contato.html">Contato</a>
-      <a href="faq.html">FAQ</a>
+      <a href="login.html">Login</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Mais ▼</button>
+        <button class="dropbtn" aria-label="Abrir mais opções">
+          Mais ▼
+        </button>
+
         <div class="dropdown-content">
+          <a href="faq.html">FAQ</a>
           <a href="minitlc.html">Mini TLC</a>
           <a href="sobre.html">Sobre</a>
         </div>
       </div>
 
-      <button id="dark-mode-btn">🌓</button>
+      <button id="dark-mode-btn" aria-label="Alternar modo escuro">
+        🌓
+      </button>
     </nav>
 
     <main>
       <section class="hero">
         <h2>Atividades TLC</h2>
+
         <p>
           Conheça as atividades que fortalecem nossa fé, amizade e espírito de
           equipe.
         </p>
       </section>
 
-      <div class="cards">
-        <section class="card">
+      <section class="cards">
+        <article class="card">
           <h3>⚽ Futebol</h3>
+
           <p>Treinos, amistosos e campeonatos.</p>
 
           <div class="botao-centro">
             <a href="futebol.html" class="btn-evento">Saiba Mais</a>
           </div>
-        </section>
+        </article>
 
-        <section class="card">
+        <article class="card">
           <h3>🏐 Vôlei</h3>
-          <p>Integração e trabalho em equipe.</p>
+
+          <p>Integração, amizade e trabalho em equipe.</p>
 
           <div class="botao-centro">
             <a href="volei.html" class="btn-evento">Saiba Mais</a>
           </div>
-        </section>
+        </article>
 
-        <section class="card">
+        <article class="card">
           <h3>🙏 Oração</h3>
+
           <p>Momentos de espiritualidade e comunhão.</p>
 
           <div class="botao-centro">
             <a href="oracao.html" class="btn-evento">Saiba Mais</a>
           </div>
-        </section>
+        </article>
 
-        <section class="card">
+        <article class="card">
           <h3>📖 Formação</h3>
+
           <p>Crescimento humano e cristão.</p>
 
           <div class="botao-centro">
             <a href="formacao.html" class="btn-evento">Saiba Mais</a>
           </div>
-        </section>
-      </div>
+        </article>
+      </section>
     </main>
 
     <footer>
       <div class="footer-grid">
         <div>
-          <img src="img/logo.png" alt="Logo TLC" class="footer-logo" />
+          <img
+            src="img/logo.png"
+            alt="Logo TLC - Atletas de Cristo"
+            class="footer-logo"
+          />
 
           <h3>TLC - Atletas de Cristo</h3>
 
-          <p>Evangelizando jovens através da fé, do esporte e da amizade.</p>
+          <p>
+            Evangelizando jovens através da fé, do esporte e da amizade.
+          </p>
         </div>
 
         <div>
@@ -107,11 +136,8 @@
 
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
-
             <li><a href="sobre.html">Sobre</a></li>
-
             <li><a href="eventos.html">Eventos</a></li>
-
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
@@ -120,9 +146,7 @@
           <h3>Contato</h3>
 
           <p>📍 Setor COP</p>
-
           <p>📸 @minitlc.cop</p>
-
           <p>✉ contato@tlc.com.br</p>
         </div>
       </div>
@@ -132,7 +156,7 @@
       </div>
     </footer>
 
-    <a href="#" class="topo">⬆</a>
+    <a href="#" class="topo" aria-label="Voltar ao topo">⬆</a>
 
     <script src="script.js"></script>
   </body>

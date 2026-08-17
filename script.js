@@ -1,144 +1,275 @@
 /* =========================
    MENU MOBILE
 ========================= */
+
 const menuBtn = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
 if (menuBtn && nav) {
+  menuBtn.setAttribute("aria-expanded", "false");
+
   menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("ativo");
+    const aberto = nav.classList.toggle("ativo");
+
+    menuBtn.setAttribute("aria-expanded", String(aberto));
   });
 }
 
 /* =========================
-   CONTADOR EVENTO
+   DROPDOWN MAIS
 ========================= */
+
+const dropdownButtons = document.querySelectorAll(".dropdown > .dropbtn");
+
+dropdownButtons.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    const dropdown = btn.closest(".dropdown");
+
+    const aberto = dropdown.classList.contains("ativo");
+
+    document.querySelectorAll(".dropdown.ativo").forEach((item) => {
+      item.classList.remove("ativo");
+    });
+
+    if (!aberto) {
+      dropdown.classList.add("ativo");
+    }
+  });
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".dropdown.ativo").forEach((item) => {
+    item.classList.remove("ativo");
+  });
+});
+
+/* =========================
+   CONTADOR DO EVENTO
+========================= */
+
 const contador = document.getElementById("contador");
 
 if (contador) {
   const dataEvento = new Date("2027-10-15T23:59:59").getTime();
 
-  setInterval(() => {
+  const atualizarContador = () => {
     const agora = Date.now();
+
     const distancia = dataEvento - agora;
 
+    if (distancia <= 0) {
+      contador.innerHTML = "🎉 O evento já começou!";
+
+      return;
+    }
+
     const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+
     const horas = Math.floor(
       (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
+
     const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+
     const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
     const anos = Math.floor(dias / 365);
+
     const diasRestantes = dias % 365;
 
-    contador.innerHTML = `🔥 Falta ${anos} ano(s) e ${diasRestantes} dias<br>
-            ⏰ ${horas}h ${minutos}m ${segundos}s`;
-  }, 1000);
+    contador.innerHTML = `
+    🔥 Falta ${anos} ano(s) e ${diasRestantes} dias
+    <br>
+    ⏰ ${horas}h ${minutos}m ${segundos}s
+    `;
+  };
+
+  atualizarContador();
+
+  setInterval(atualizarContador, 1000);
 }
 
 /* =========================
    VAGAS MINI TLC
 ========================= */
-fetch(
-  "https://script.google.com/macros/s/AKfycbxFjf5mQArDBoCWDd2I3wtvnQefIAfACP1SWeXQSXgHr0Tzn1wamYvDToLaXQVkvJsl0A/exec",
-)
-  .then((res) => res.json())
+
+const apiVagas =
+  "https://script.google.com/macros/s/AKfycbxFjf5mQArDBoCWDd2I3wtvnQefIAfACP1SWeXQSXgHr0Tzn1wamYvDToLaXQVkvJsl0A/exec";
+
+fetch(apiVagas)
+  .then((resposta) => {
+    if (!resposta.ok) {
+      throw new Error("Erro na API");
+    }
+
+    return resposta.json();
+  })
+
   .then((dados) => {
     const vagas = document.getElementById("vagas-restantes");
+
     const texto = document.getElementById("texto-vagas");
+
     const barra = document.getElementById("progresso-vagas");
 
-    if (vagas) vagas.textContent = dados.restantes;
-    if (texto) texto.textContent = `${dados.inscricoes} inscritos de 62 vagas`;
-    if (barra) barra.style.width = `${(dados.inscricoes / 62) * 100}%`;
+    if (vagas) {
+      vagas.textContent = dados.restantes;
+    }
+
+    if (texto) {
+      texto.textContent = `${dados.inscricoes} inscritos de 62 vagas`;
+    }
+
+    if (barra) {
+      const porcentagem = (dados.inscricoes / 62) * 100;
+
+      barra.style.width = `${porcentagem}%`;
+    }
 
     const link = document.getElementById("link-inscricao");
+
     if (dados.encerrado && link) {
       link.textContent = "❌ Inscrições Encerradas";
+
       link.removeAttribute("href");
     }
   })
-  .catch(() => console.log("Erro ao carregar vagas"));
+
+  .catch((erro) => {
+    console.error("Erro ao carregar vagas:", erro);
+
+    const texto = document.getElementById("texto-vagas");
+
+    if (texto) {
+      texto.textContent = "Não foi possível carregar as vagas.";
+    }
+  });
 
 /* =========================
    CARROSSEL
 ========================= */
+
 const slides = document.querySelectorAll(".slide");
+
 const bolinhas = document.querySelectorAll(".bolinha");
+
 const btnAnterior = document.querySelector(".anterior");
+
 const btnProximo = document.querySelector(".proximo");
 
 if (slides.length) {
   let slideAtual = 0;
 
-  function mostrarSlide(i) {
-    slides.forEach((s) => s.classList.remove("ativo"));
-    bolinhas.forEach((b) => b.classList.remove("ativa"));
+  function mostrarSlide(numero) {
+    slides.forEach((slide) => {
+      slide.classList.remove("ativo");
+    });
 
-    slides[i].classList.add("ativo");
-    if (bolinhas[i]) bolinhas[i].classList.add("ativa");
+    bolinhas.forEach((bolinha) => {
+      bolinha.classList.remove("ativa");
+    });
 
-    slideAtual = i;
+    slides[numero].classList.add("ativo");
+
+    if (bolinhas[numero]) {
+      bolinhas[numero].classList.add("ativa");
+    }
+
+    slideAtual = numero;
   }
 
-  function proximo() {
+  function proximoSlide() {
     mostrarSlide((slideAtual + 1) % slides.length);
   }
 
-  function anterior() {
+  function voltarSlide() {
     mostrarSlide((slideAtual - 1 + slides.length) % slides.length);
   }
 
-  btnProximo?.addEventListener("click", proximo);
-  btnAnterior?.addEventListener("click", anterior);
+  btnProximo?.addEventListener("click", proximoSlide);
 
-  setInterval(proximo, 4000);
+  btnAnterior?.addEventListener("click", voltarSlide);
+
+  setInterval(proximoSlide, 4000);
 }
 
 /* =========================
-   SCROLL ANIMAÇÃO (ÚNICA E LIMPA)
+   ANIMAÇÃO DAS SEÇÕES
 ========================= */
-const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("mostrar");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  },
-);
+const secoes = document.querySelectorAll("section");
 
-sections.forEach((sec) => observer.observe(sec));
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("mostrar");
+
+          observer.unobserve(entrada.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    },
+  );
+
+  secoes.forEach((secao) => {
+    observer.observe(secao);
+  });
+} else {
+  secoes.forEach((secao) => {
+    secao.classList.add("mostrar");
+  });
+}
+
+/* Segurança caso alguma animação falhe */
+
+setTimeout(() => {
+  secoes.forEach((secao) => {
+    secao.classList.add("mostrar");
+  });
+}, 4000);
 
 /* =========================
-   LIGHTBOX
+   LIGHTBOX GALERIA
 ========================= */
-const imagens = document.querySelectorAll(".galeria img");
-const lightbox = document.getElementById("lightbox");
-const imagemAmpliada = document.getElementById("imagem-ampliada");
-const fechar = document.getElementById("fechar");
 
-if (imagens.length && lightbox) {
-  imagens.forEach((img) => {
-    img.addEventListener("click", () => {
+const imagens = document.querySelectorAll(".galeria img");
+
+const lightbox = document.getElementById("lightbox");
+
+const imagemAmpliada = document.getElementById("imagem-ampliada");
+
+const fecharLightbox = document.getElementById("fechar");
+
+if (imagens.length && lightbox && imagemAmpliada) {
+  imagens.forEach((imagem) => {
+    imagem.addEventListener("click", () => {
       lightbox.style.display = "flex";
-      imagemAmpliada.src = img.src;
+
+      imagemAmpliada.src = imagem.src;
+
+      imagemAmpliada.alt = imagem.alt || "Imagem ampliada";
     });
   });
 }
 
-fechar?.addEventListener("click", () => {
+fecharLightbox?.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
 
-lightbox?.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
+lightbox?.addEventListener("click", (evento) => {
+  if (evento.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
+
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape" && lightbox?.style.display === "flex") {
     lightbox.style.display = "none";
   }
 });
@@ -146,51 +277,73 @@ lightbox?.addEventListener("click", (e) => {
 /* =========================
    CONTADORES ANIMADOS
 ========================= */
+
 const numeros = document.querySelectorAll(".contador-numero");
 
-const contadorObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
+if (numeros.length && "IntersectionObserver" in window) {
+  const contadorObserver = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (!entrada.isIntersecting) return;
 
-    const el = entry.target;
-    const alvo = parseInt(el.dataset.alvo);
+        const elemento = entrada.target;
 
-    let atual = 0;
-    const inc = Math.ceil(alvo / 50);
+        const valorFinal = Number(elemento.dataset.alvo);
 
-    const anim = setInterval(() => {
-      atual += inc;
+        let valorAtual = 0;
 
-      if (atual >= alvo) {
-        atual = alvo;
-        clearInterval(anim);
-      }
+        const incremento = Math.ceil(valorFinal / 60);
 
-      el.textContent = atual.toLocaleString("pt-BR");
-    }, 30);
+        const animacao = setInterval(() => {
+          valorAtual += incremento;
 
-    contadorObserver.unobserve(el);
+          if (valorAtual >= valorFinal) {
+            valorAtual = valorFinal;
+
+            clearInterval(animacao);
+          }
+
+          elemento.textContent = valorAtual.toLocaleString("pt-BR");
+        }, 30);
+
+        contadorObserver.unobserve(elemento);
+      });
+    },
+    {
+      threshold: 0.5,
+    },
+  );
+
+  numeros.forEach((numero) => {
+    contadorObserver.observe(numero);
   });
-});
-
-numeros.forEach((n) => contadorObserver.observe(n));
+} else {
+  numeros.forEach((numero) => {
+    numero.textContent = Number(numero.dataset.alvo).toLocaleString("pt-BR");
+  });
+}
 
 /* =========================
-   LINK ATIVO
+   LINK ATIVO DO MENU
 ========================= */
+
 const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
 
 document.querySelectorAll("nav a").forEach((link) => {
-  if (link.getAttribute("href") === paginaAtual) {
+  const destino = link.getAttribute("href");
+
+  if (destino === paginaAtual) {
     link.classList.add("ativo");
   }
 });
 
 /* =========================
-   LOADER (CORRIGIDO 100%)
+   LOADER
 ========================= */
+
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
+
   if (!loader) return;
 
   setTimeout(() => {
@@ -205,57 +358,127 @@ window.addEventListener("load", () => {
 /* =========================
    TESTEMUNHOS
 ========================= */
-const testemunhos = [
+
+const listaTestemunhos = [
   "O TLC me ajudou a crescer na fé e encontrar amigos para toda a vida.",
+
   "O Mini TLC foi uma experiência que marcou profundamente minha caminhada.",
+
   "Aprendi que o esporte também pode ser um caminho de evangelização.",
+
   "Conheci pessoas que hoje considero uma segunda família.",
+
   "Foi um dos momentos mais importantes da minha adolescência.",
 ];
 
 const textoTestemunho = document.getElementById("texto-testemunho");
-const btnAnt = document.getElementById("anterior-testemunho");
-const btnProx = document.getElementById("proximo-testemunho");
 
-if (textoTestemunho && btnAnt && btnProx) {
-  let i = 0;
+const botaoAnteriorTestemunho = document.getElementById("anterior-testemunho");
 
-  function atualizar() {
-    textoTestemunho.textContent = testemunhos[i];
+const botaoProximoTestemunho = document.getElementById("proximo-testemunho");
+
+if (textoTestemunho && botaoAnteriorTestemunho && botaoProximoTestemunho) {
+  let indiceTestemunho = 0;
+
+  function atualizarTestemunho() {
+    textoTestemunho.textContent = `"${listaTestemunhos[indiceTestemunho]}"`;
   }
 
-  btnProx.addEventListener("click", () => {
-    i = (i + 1) % testemunhos.length;
-    atualizar();
+  botaoProximoTestemunho.addEventListener("click", () => {
+    indiceTestemunho = (indiceTestemunho + 1) % listaTestemunhos.length;
+
+    atualizarTestemunho();
   });
 
-  btnAnt.addEventListener("click", () => {
-    i = (i - 1 + testemunhos.length) % testemunhos.length;
-    atualizar();
+  botaoAnteriorTestemunho.addEventListener("click", () => {
+    indiceTestemunho =
+      (indiceTestemunho - 1 + listaTestemunhos.length) %
+      listaTestemunhos.length;
+
+    atualizarTestemunho();
   });
 
   setInterval(() => {
-    i = (i + 1) % testemunhos.length;
-    atualizar();
+    indiceTestemunho = (indiceTestemunho + 1) % listaTestemunhos.length;
+
+    atualizarTestemunho();
   }, 5000);
 }
 
 /* =========================
    DARK MODE
 ========================= */
-const darkBtn = document.getElementById("dark-mode-btn");
 
-if (darkBtn) {
-  const tema = localStorage.getItem("tema");
+const botaoDark = document.getElementById("dark-mode-btn");
 
-  if (tema === "dark") document.body.classList.add("dark");
+if (botaoDark) {
+  const temaSalvo = localStorage.getItem("tema");
 
-  darkBtn.addEventListener("click", () => {
+  if (temaSalvo === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  botaoDark.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
-    localStorage.setItem(
-      "tema",
-      document.body.classList.contains("dark") ? "dark" : "light",
-    );
+    const temaAtual = document.body.classList.contains("dark")
+      ? "dark"
+      : "light";
+
+    localStorage.setItem("tema", temaAtual);
   });
 }
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+const botaoTopo = document.querySelector(".topo");
+
+if (botaoTopo) {
+  botaoTopo.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+
+      behavior: "smooth",
+    });
+  });
+}
+
+/* =========================
+   FECHAR MENU MOBILE AO CLICAR
+   EM UM LINK
+========================= */
+
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav?.classList.remove("ativo");
+
+    menuBtn?.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* =========================
+   ANO AUTOMÁTICO FOOTER
+========================= */
+
+const anoAtual = document.querySelector(".footer-bottom");
+
+if (anoAtual) {
+  anoAtual.innerHTML = anoAtual.innerHTML.replace(
+    "2026",
+    new Date().getFullYear(),
+  );
+}
+
+/* =========================
+   PROTEÇÃO CONTRA ERROS
+========================= */
+
+window.addEventListener("error", (evento) => {
+  console.warn("Erro capturado:", evento.message);
+});
+
+

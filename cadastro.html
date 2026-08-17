@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Criar conta - Mini TLC | Atletas de Cristo"
+    />
+
+    <title>Criar Conta | Mini TLC</title>
+
+    <link rel="icon" href="img/logo.png" />
+
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+
+  <body>
+    <!-- FUNDO -->
+
+    <div class="background">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+
+      <div class="background-shape shape-1"></div>
+      <div class="background-shape shape-2"></div>
+    </div>
+
+    <!-- PÁGINA -->
+
+    <main class="register-page">
+      <section class="register-container">
+        <!-- LADO ESQUERDO -->
+
+        <div class="register-brand">
+          <div class="brand-content">
+            <a href="index.html" class="brand-logo">
+              <img src="img/logo.png" alt="Logo Mini TLC" />
+            </a>
+
+            <span class="brand-badge"> MINI TLC </span>
+
+            <h1>Faça parte dessa família!</h1>
+
+            <p>
+              Crie sua conta e fique conectado com tudo o que acontece no Mini
+              TLC. Uma comunidade construída através da fé, amizade e comunhão.
+            </p>
+
+            <div class="brand-motto">
+              <span>Fé</span>
+
+              <strong>•</strong>
+
+              <span>Esporte</span>
+
+              <strong>•</strong>
+
+              <span>Comunhão</span>
+
+              <strong>•</strong>
+
+              <span>Evangelização</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="register-card">
+          <!-- LOGO MOBILE -->
+
+          <div class="mobile-logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="Logo Mini TLC" />
+            </a>
+          </div>
+
+          <!-- CABEÇALHO -->
+
+          <div class="register-header">
+            <span class="register-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M15 12a4 4 0 1 0-4-4
+                                4 4 0 0 0 4 4Zm0-6a2 2
+                                0 1 1 0 0 1 0 4 2 2 0
+                                0 0 1 0-4Zm-7 8a4 4 0
+                                0 0 0-4 4v2h2v-2a2
+                                2 0 0 1 2-2h4v-2H8Zm9
+                                0h-1v-1h-2v1h-1v2h1v1h2
+                                v-1h1v-2Z"
+                />
+              </svg>
+            </span>
+
+            <h2>Criar conta</h2>
+
+            <p>Crie sua conta no Mini TLC</p>
+          </div>
+
+          <!-- FORMULÁRIO -->
+
+          <form id="registerForm" class="register-form" novalidate>
+            <!-- NOME -->
+
+            <div class="input-group">
+              <label for="name"> Nome completo </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 12a5 5 0 1 0
+                                        0-10 5 5 0 0 0 0
+                                        10Zm0-8a3 3 0 1 1
+                                        0 6 3 3 0 0 1 0-6Zm0
+                                        10c-5 0-9 2.5-9 6v2h18v-2
+                                        c0-3.5-4-6-9-6Zm-6.8
+                                        6c.7-2.1 3.3-4 6.8-4
+                                        s6.1 1.9 6.8 4H5.2Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Digite seu nome completo"
+                  autocomplete="name"
+                />
+              </div>
+
+              <small class="field-error" id="nameError"></small>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+              <label for="email"> E-mail </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 4H4a2 2 0 0
+                                        0-2 2v12a2 2 0 0 0
+                                        2 2h16a2 2 0 0 0
+                                        2-2V6a2 2 0 0 0
+                                        -2-2Zm0 4-8 5-8-5V6l8
+                                        5 8-5v2Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  autocomplete="email"
+                />
+              </div>
+
+              <small class="field-error" id="emailError"></small>
+            </div>
+
+            <!-- WHATSAPP -->
+
+            <div class="input-group">
+              <label for="phone"> WhatsApp </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 3.9A10 10 0 0
+                                        0 3.9 20L3 22l2.1-.8A10
+                                        10 0 1 0 20 3.9ZM12
+                                        20a8 8 0 0 1-4.1-1.1l-.3
+                                        -.2-1.3.5.5-1.3-.2-.3A8
+                                        8 0 1 1 12 20Zm4.4-5.9
+                                        c-.2-.1-1.3-.7-1.5-.8
+                                        -.2-.1-.4-.1-.5.1
+                                        -.2.2-.5.8-.7 1-.1.2
+                                        -.3.2-.5.1-.3-.1-1-.4
+                                        -1.9-1.2-.7-.6-1.2-1.4
+                                        -1.4-1.6-.1-.2 0-.4.1-.5
+                                        l.4-.5c.1-.2.2-.3.3-.5
+                                        .1-.2 0-.4 0-.5-.1-.1
+                                        -.5-1.2-.7-1.6-.2-.4-.4
+                                        -.3-.5-.3h-.4c-.2 0-.5.1
+                                        -.7.3-.2.2-.8.8-.8 2s.8
+                                        2.3.9 2.5c.1.2 1.6 2.5
+                                        4 3.4.6.3 1.1.5 1.5.6
+                                        .6.2 1.2.2 1.6.1.5-.1
+                                        1.3-.5 1.5-1 .2-.5.2-.9
+                                        .1-1-.1-.1-.3-.2-.5-.3Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(41) 99999-9999"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <small class="field-error" id="phoneError"></small>
+            </div>
+
+            <!-- SENHA -->
+
+            <div class="input-group">
+              <label for="password"> Senha </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M17 8h-1V6a4 4 0
+                                        0 0-8 0v2H7a2 2 0
+                                        0 0-2 2v10a2 2 0
+                                        0 0 2 2h10a2 2 0
+                                        0 0 2-2V10a2 2
+                                        0 0-2-2Zm-7-2a2 2
+                                        0 1 1 4 0v2h-4V6Zm5
+                                        14H9a1 1 0 0 1-1-1v-8
+                                        a1 1 0 0 1 1-1h6a1 1
+                                        0 0 1 1 1v8a1 1 0
+                                        0 0 1-1 1Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Crie uma senha"
+                  autocomplete="new-password"
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="passwordToggle"
+                  aria-label="Mostrar senha"
+                >
+                  <span class="eye-open"> 👁 </span>
+
+                  <span class="eye-closed"> ◉ </span>
+                </button>
+              </div>
+
+              <div class="password-strength" id="passwordStrength">
+                <div class="strength-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <small id="strengthText"> Mínimo de 6 caracteres </small>
+              </div>
+
+              <small class="field-error" id="passwordError"></small>
+            </div>
+
+            <!-- CONFIRMAR SENHA -->
+
+            <div class="input-group">
+              <label for="confirmPassword"> Confirmar senha </label>
+
+              <div class="input-wrapper">
+                <span class="input-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M17 8h-1V6a4 4 0
+                                        0 0-8 0v2H7a2 2 0
+                                        0-2 2v10a2 2 0
+                                        0 0 2 2h10a2 2
+                                        0 0 0 2-2V10a2
+                                        2 0 0-2-2Zm-7-2a2
+                                        2 0 1 1 4 0v2h-4V6Z"
+                    />
+                  </svg>
+                </span>
+
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Digite a senha novamente"
+                  autocomplete="new-password"
+                />
+              </div>
+
+              <small class="field-error" id="confirmPasswordError"></small>
+            </div>
+
+            <!-- TERMOS -->
+
+            <div class="terms">
+              <label class="terms-label">
+                <input type="checkbox" id="terms" />
+
+                <span class="custom-checkbox"></span>
+
+                <span>
+                  Li e aceito os
+                  <a href="termos.html"> termos de uso </a>
+                  e a
+                  <a href="termos.html"> política de privacidade </a>.
+                </span>
+              </label>
+            </div>
+
+            <!-- MENSAGEM -->
+
+            <div class="form-message" id="formMessage" role="alert"></div>
+
+            <!-- BOTÃO -->
+
+            <button type="submit" class="register-button" id="registerButton">
+              <span class="button-text"> CRIAR CONTA </span>
+
+              <span class="button-loader"></span>
+
+              <svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m13 5 7 7-7 7-1.4-1.4
+                                4.6-4.6H4v-2h12.2l-4.6-4.6L13 5Z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <!-- LOGIN -->
+
+          <div class="login-link">
+            <span> Já possui uma conta? </span>
+
+            <a href="login.html"> Entrar </a>
+          </div>
+
+          <!-- VOLTAR -->
+
+          <a href="index.html" class="back-home">
+            <span>←</span>
+
+            Voltar para o site
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="cadastro.js"></script>
+  </body>
+</html>
