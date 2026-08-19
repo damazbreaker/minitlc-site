@@ -43,12 +43,15 @@
       <a href="galeria.html">Galeria</a>
       <a href="equipe.html">Equipe</a>
       <a href="contato.html">Contato</a>
-      <a href="faq.html">FAQ</a>
+      <a href="login.html">Login</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Mais ▼</button>
+        <button class="dropbtn" aria-label="Abrir mais opções">
+          Mais ▼
+        </button>
 
         <div class="dropdown-content">
+          <a href="faq.html">FAQ</a>
           <a href="minitlc.html">Mini TLC</a>
           <a href="sobre.html">Sobre</a>
         </div>
@@ -63,17 +66,18 @@
       <section class="section">
         <h2>Entre em Contato</h2>
 
-        <form>
+        <form id="form-contato">
           <label for="nome">Nome</label>
-          <input id="nome" type="text" name="nome" />
+          <input id="nome" type="text" name="nome" autocomplete="name" required />
 
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" />
+          <input id="email" type="email" name="email" autocomplete="email" required />
 
           <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit">Enviar mensagem</button>
+          <p class="form-aviso" aria-live="polite"></p>
         </form>
       </section>
 

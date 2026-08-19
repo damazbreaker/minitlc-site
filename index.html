@@ -17,57 +17,68 @@
     <link rel="icon" type="image/png" href="img/logo.png" />
   </head>
 
-  <body>
+  <body class="pagina-inicial">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <div id="loader">
       <img src="img/logo.png" alt="Logo TLC" />
       <p>Carregando...</p>
     </div>
 
-    <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank">
+    <a href="https://wa.me/5541999999999" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Falar com o TLC pelo WhatsApp">
       💬
     </a>
 
-    <header>
-      <img src="img/logo.png" alt="Logo TLC" class="logo" />
+    <header class="home-header">
+      <div class="home-header-conteudo">
+        <img src="img/logo.png" alt="Logo TLC" class="logo" />
 
-      <h1>✝️ TLC - Atletas de Cristo</h1>
+        <p class="sobretitulo">Juventude em movimento</p>
+        <h1>TLC — Atletas de Cristo</h1>
 
-      <p>Fé • Esporte • Comunhão • Evangelização</p>
+        <p class="home-header-texto">Fé, esporte e amizade para formar jovens discípulos de Cristo.</p>
+
+        <div class="home-header-acoes">
+          <a href="minitlc.html" class="btn btn-principal">Conheça o Mini TLC <span aria-hidden="true">→</span></a>
+          <a href="#areas" class="btn btn-secundario">Explorar atividades</a>
+        </div>
+      </div>
     </header>
 
-    <nav>
-      <button class="menu-toggle">☰</button>
+    <nav aria-label="Navegação principal">
+      <button class="menu-toggle" aria-label="Abrir menu" aria-controls="menu-principal">☰</button>
 
+      <div class="nav-links" id="menu-principal">
       <a href="index.html">Início</a>
-
       <a href="atividades.html">Atividades</a>
-
       <a href="eventos.html">Eventos</a>
-
       <a href="galeria.html">Galeria</a>
-
       <a href="equipe.html">Equipe</a>
-
       <a href="contato.html">Contato</a>
-
-      <a href="faq.html">FAQ</a>
+      <a href="login.html">Login</a>
 
       <div class="dropdown">
-        <button class="dropbtn">Mais ▼</button>
+        <button class="dropbtn" aria-label="Abrir mais opções">
+          Mais ▼
+        </button>
 
         <div class="dropdown-content">
-          <a href="minitlc.html"> Mini TLC </a>
-
-          <a href="sobre.html"> Sobre </a>
+          <a href="faq.html">FAQ</a>
+          <a href="minitlc.html">Mini TLC</a>
+          <a href="sobre.html">Sobre</a>
         </div>
       </div>
 
-      <button id="dark-mode-btn">🌓</button>
+      <button id="dark-mode-btn" aria-label="Alternar modo escuro" aria-pressed="false">
+        🌓
+      </button>
+      </div>
     </nav>
 
-    <main>
-      <section class="hero">
-        <h2>Quem Somos</h2>
+
+    <main id="conteudo">
+      <section class="hero apresentacao">
+        <p class="sobretitulo">Uma comunidade que acolhe</p>
+        <h2>Mais que um movimento: um lugar para pertencer.</h2>
 
         <p>
           O TLC é um movimento católico voltado à evangelização de jovens
@@ -75,7 +86,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="momentos">
         <h2>📸 Momentos TLC</h2>
 
         <div class="carrossel">
@@ -91,9 +102,9 @@
 
           <img src="img/foto6.jpg" class="slide" alt="Momento TLC" />
 
-          <button class="anterior">&#10094;</button>
+          <button class="anterior" aria-label="Imagem anterior">&#10094;</button>
 
-          <button class="proximo">&#10095;</button>
+          <button class="proximo" aria-label="Próxima imagem">&#10095;</button>
 
           <div class="indicadores">
             <span class="bolinha ativa"></span>
@@ -154,7 +165,7 @@
         <a href="sobre.html" class="btn"> Conheça o TLC </a>
       </section>
 
-      <section>
+      <section id="areas">
         <h2>Nossas Áreas</h2>
 
         <div class="eventos-grid">

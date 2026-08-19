@@ -12,6 +12,7 @@ if (menuBtn && nav) {
     const aberto = nav.classList.toggle("ativo");
 
     menuBtn.setAttribute("aria-expanded", String(aberto));
+    menuBtn.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
   });
 }
 
@@ -334,6 +335,7 @@ document.querySelectorAll("nav a").forEach((link) => {
 
   if (destino === paginaAtual) {
     link.classList.add("ativo");
+    link.setAttribute("aria-current", "page");
   }
 });
 
@@ -418,6 +420,11 @@ if (botaoDark) {
     document.body.classList.add("dark");
   }
 
+  botaoDark.setAttribute(
+    "aria-pressed",
+    String(document.body.classList.contains("dark")),
+  );
+
   botaoDark.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
@@ -426,6 +433,7 @@ if (botaoDark) {
       : "light";
 
     localStorage.setItem("tema", temaAtual);
+    botaoDark.setAttribute("aria-pressed", String(temaAtual === "dark"));
   });
 }
 
@@ -436,6 +444,13 @@ if (botaoDark) {
 const botaoTopo = document.querySelector(".topo");
 
 if (botaoTopo) {
+  const atualizarBotaoTopo = () => {
+    botaoTopo.classList.toggle("visivel", window.scrollY > 500);
+  };
+
+  atualizarBotaoTopo();
+  window.addEventListener("scroll", atualizarBotaoTopo, { passive: true });
+
   botaoTopo.addEventListener("click", (evento) => {
     evento.preventDefault();
 
@@ -444,6 +459,68 @@ if (botaoTopo) {
 
       behavior: "smooth",
     });
+  });
+}
+
+/* =========================
+   ESTRUTURA E ACESSIBILIDADE COMPARTILHADAS
+========================= */
+
+const conteudoPrincipal = document.querySelector("main");
+
+if (conteudoPrincipal && !conteudoPrincipal.id) {
+  conteudoPrincipal.id = "conteudo";
+}
+
+if (conteudoPrincipal && !document.querySelector(".pular-conteudo")) {
+  const pularConteudo = document.createElement("a");
+
+  pularConteudo.className = "pular-conteudo";
+  pularConteudo.href = "#conteudo";
+  pularConteudo.textContent = "Pular para o conteúdo";
+
+  document.body.prepend(pularConteudo);
+}
+
+document.querySelectorAll("nav").forEach((menu) => {
+  if (!menu.hasAttribute("aria-label")) {
+    menu.setAttribute("aria-label", "Navegação principal");
+  }
+});
+
+document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+  const relAtual = link.getAttribute("rel") || "";
+
+  if (!relAtual.includes("noopener")) {
+    link.setAttribute("rel", `${relAtual} noopener noreferrer`.trim());
+  }
+});
+
+/* =========================
+   FORMULÁRIO DE CONTATO
+========================= */
+
+const formularioContato = document.getElementById("form-contato");
+
+if (formularioContato) {
+  formularioContato.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    if (!formularioContato.checkValidity()) {
+      formularioContato.reportValidity();
+      return;
+    }
+
+    const dados = new FormData(formularioContato);
+    const aviso = formularioContato.querySelector(".form-aviso");
+    const assunto = "Contato pelo site TLC";
+    const mensagem = `Nome: ${dados.get("nome")}\nE-mail: ${dados.get("email")}\n\nMensagem:\n${dados.get("mensagem")}`;
+
+    if (aviso) {
+      aviso.textContent = "Abrindo seu aplicativo de e-mail para enviar a mensagem.";
+    }
+
+    window.location.href = `mailto:contato@tlc.com.br?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
   });
 }
 
